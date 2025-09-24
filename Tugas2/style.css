@@ -152,6 +152,11 @@ header .d {
         margin-top: 15px;
     }
 
+    #hobi h2 {
+        padding-left: 10px;      
+        border-left: 4px solid #22c55e;
+    }
+
     .cita {
         text-align: left;
         background: #c9e7ff;
@@ -159,6 +164,11 @@ header .d {
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-top: 15px;
+    }
+
+    .cita h2 {
+        padding-left: 10px;      
+        border-left: 4px solid #22c55e;
     }
 
     .fun{
@@ -171,6 +181,11 @@ header .d {
         text-align: left;
     }
 
+    .fun h2 {
+        padding-left: 10px;      
+        border-left: 4px solid #22c55e;
+    }
+
     .kontak {
         background: #c9e7ff;
         margin-top: 15px;
@@ -179,6 +194,11 @@ header .d {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-top: 15px; 
         text-align: left;
+    }
+
+    .kontak h2 {
+        padding-left: 10px;      
+        border-left: 4px solid #22c55e;
     }
 
     li {
