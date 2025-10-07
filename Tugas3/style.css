@@ -340,48 +340,48 @@ tbody tr:hover {
   background-color: #f0f4ff;
 }
 
-.galeri{
+.galeri {
   background: #fff;
-  max-width: 67.5%;
-  margin: auto;
-  padding: 20px;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  margin-bottom: 40px;
 }
 
 .galeri h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
   color: #1f3a93;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-left: 10px;      
+  padding-left: 10px;
   border-left: 4px solid #22c55e;
 }
 
 .galeri p {
   color: #666;
   text-align: center;
-
 }
 
 .galeri .allfoto {
-  display: inline-flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 15px;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;          
+  justify-content: center;   
+  gap: 1.5rem;               
+  margin-top: 1.5rem;
 }
 
 .galeri #foto {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 10px;
+  padding: 15px;
+  text-align: center;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 235px;              
 }
 
 .galeri #foto img {
@@ -389,15 +389,20 @@ tbody tr:hover {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  margin: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   background: #ebebeb;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.galeri #foto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .galeri #foto img:hover {
-  transform: scale(1.05);
-  transition: .3s;
-} 
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
 
 .gallery {
   background: #fff;
