@@ -391,6 +391,8 @@ tbody tr:hover {
   border-radius: 8px;
   background: #ebebeb;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  filter: blur(8px);
+  transition: transform 0.5s ease, filter  0.5s ease;
 }
 
 .galeri #foto:hover {
@@ -401,6 +403,7 @@ tbody tr:hover {
 .galeri #foto img:hover {
   transform: scale(1.03);
   transition: 0.3s;
+  filter: blur(0);
 }
 
 
@@ -428,6 +431,12 @@ tbody tr:hover {
 
 .gallery iframe {
   border-radius: 8px;
+  filter: blur(8px);
+}
+
+.gallery iframe:hover {
+  filter: blur(0);
+  transition: 0.5s;
 }
 
 header {
