@@ -1,0 +1,168 @@
+/* 1. Impor Font Lokal (BismillahScript.ttf) */
+@font-face {
+    font-family: 'BismillahScript.ttf';
+    src: url('./fonts/BismillahScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Properti Text Formatting Dasar (Minimal 8 Properti) */
+
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    background-color: #00cbcb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23f6f4f0' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E"); /* Light Gray Background */
+    /* Properti 1: font-size (Dasar) */
+    font-size: 16px; 
+    /* Properti 2: line-height (Keterbacaan) */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header & Judul Artikel (H1) */
+header {
+    background-color: #F6F4F0; 
+    color: #008080;/* Teal color */
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    /* Properti 3: text-align */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    /* Properti 4: font-size (Besar) */
+    font-size: 2.5em; 
+    /* Properti 5: font-weight (Tebal) */
+    font-weight: 700; 
+    /* Properti 6: text-transform */
+    text-transform: uppercase;
+    /* Properti 7: letter-spacing (Memberi Ruang) */
+    letter-spacing: 2px;
+}
+
+/* Isi Artikel (Paragraf) */
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #F6F4F0;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+article p {
+    margin-bottom: 1em;
+    /* Properti 8: color */
+    color: #4b5563;
+    /* Menggunakan Font Utama Poppins */    
+}
+
+.sub-judul {
+    font-family: 'Poppins', sans-serif;
+    color: #008080;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 5px;
+}
+
+/* Quote Box (Gaya Berbeda) */
+.quote-box {
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #008080;
+    padding: 15px 20px;
+    margin: 30px auto;
+    border-left: 5px solid #008080;
+    quotes: "“" "”" "‘" "’";
+    position: relative;
+    transition: transform 0.3s;
+    border-radius: 8px;
+}
+
+.quote-box::before {
+    content: open-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.quote-box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Note Box (Gaya Berbeda) */
+.note {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #eff6ff; /* Light Blue Background */
+    border: 1px solid #93c5fd;
+    border-radius: 5px;
+    border-left: #1e40af 4px solid;
+    font-style: italic;
+    /* Properti Tambahan: text-indent */
+    text-indent: 0; 
+    color: #1e40af;
+    transition: all 0.3s ease-in-out;
+}
+
+.note:hover {
+    background-color: #dbeafe;
+    transition: transform 0.3s background-color 0.3s;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+
+
+/* Tanda Tangan Penulis (Tantangan Tambahan) */
+.signature {
+  font-family: 'BismillahScript.ttf', cursive;
+  font-size: 40px;
+  color: #003737;
+  text-align: right;
+}
+
+/* Footer */
+footer {
+    max-width: 800px;
+    margin: 30px auto 0;
+    text-align: center;
+    padding: 10px;
+    color: #4b5563;
+    font-size: 0.9em;
+}
+
+/* Contoh Penggunaan Text Decoration */
+.property-highlight {
+    /* Properti 10: text-decoration */
+    text-decoration: underline wavy #10b981; 
+    font-weight: bold;
+    color: #065f46;
+}
+
+.n {
+    background-color: #ADD8E6;
+}
