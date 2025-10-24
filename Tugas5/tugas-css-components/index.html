@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Profile</h1>
+  </header>
+
+  <main>
+    <!-- 🔹 TUGAS 1 - ALERT -->
+    <section>
+      <h2 id="alert-section">• Pemberitahuan.</h2>
+      <div class="alert">
+        <p><strong>Informasi Penting:</strong> Pastikan data sudah lengkap dan di isi dengan benar.</p>
+        <button class="close">&times;</button>
+      </div>
+    </section>
+
+    <!-- 🔹 TUGAS 2 - PROFILE CARD -->
+    <section>
+      <h2 id="profile-section">• Profile Card.</h2>
+      <article class="profile-card">
+        <figure class="avatar">
+          <img src="assets/mon.png" alt="Foto profil Aamon">
+          <figcaption>
+            <span class="badge" title="Aktif"></span>
+          </figcaption>
+        </figure>
+        <h3>Aamon</h3>
+        <p>UI/UX Designer</p>
+      </article>
+    </section>
+
+    <!-- 🔹 TUGAS 3 - PRICING CARDS -->
+    <section>
+      <h2 id="pricing-section">• Upgrade Devicemu</h2>
+      <div class="pricing">
+        <article class="plan">
+          <header>
+            <h3>Paket Dasar</h3>
+          </header>
+          <p class="price">Rp 100K</p>
+          <ul>
+            <li>5 Pengguna</li>
+            <li>2 GB Penyimpanan</li>
+            <li>Dukungan Email</li>
+          </ul>
+          <footer>
+            <button class="btn">Pilih Dasar</button>
+          </footer>
+        </article>
+
+        <article class="plan highlight">
+          <header>
+            <h3>Paket PRO</h3>
+          </header>
+          <p class="price red">Rp 600K</p>
+          <ul>
+            <li><strong>20 Pengguna</strong></li>
+            <li><strong>10 GB Penyimpanan</strong></li>
+            <li>Dukungan Prioritas</li>
+          </ul>
+          <footer>
+            <button class="btn red">Beli PRO</button>
+          </footer>
+        </article>
+
+        <article class="plan">
+          <header>
+            <h3>Paket Bisnis</h3>
+          </header>
+          <p class="price">Rp 900K</p>
+          <ul>
+            <li>Tidak Terbatas</li>
+            <li>50 GB Penyimpanan</li>
+            <li>Dukungan 24/7</li>
+          </ul>
+          <footer>
+            <button class="btn">Hubungi Kami</button>
+          </footer>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tugas5 HTML & CSS Dasar – Dibuat oleh Aamon</p>
+  </footer>
+
+  <script>
+    // Tutup alert saat tombol X diklik
+    document.querySelector(".close").addEventListener("click", function() {
+      this.parentElement.style.display = "none";
+    });
+  </script>
+</body>
+</html>
