@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Feedback - HSI Boarding School</title>
+    <!-- Wajib sambungkan CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+        // Fungsi untuk menangani submit form tanpa menggunakan alert()
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const messageBox = document.getElementById('formMessage');
+            
+            // Tampilkan pesan sukses
+            messageBox.textContent = 'Terima kasih atas masukan Anda! Kami akan memproses feedback ini secepatnya.';
+            messageBox.style.backgroundColor = '#d1e7dd'; /* Warna hijau muda */
+            messageBox.style.color = '#0f5132'; /* Warna teks hijau gelap */
+            messageBox.style.border = '1px solid #badbcc';
+            messageBox.style.padding = '15px';
+            messageBox.style.marginBottom = '1rem';
+            messageBox.style.borderRadius = '8px';
+            messageBox.style.display = 'block';
+
+            form.reset();
+            
+            // Sembunyikan pesan setelah 5 detik
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">HSI Purworejo</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="biodata.html">Profil Santri</a></li>
+                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
+                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
+                    <li><a href="feedback.html">Form Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-box">
+                <h1>Formulir Feedback dan Saran</h1>
+                <p>Masukan Anda sangat berharga bagi kami untuk meningkatkan kualitas pendidikan dan pelayanan.</p>
+                
+                <!-- Message Box for success/error -->
+                <div id="formMessage" style="display: none;"></div>
+
+                <!-- Form Feedback Lengkap (Grid responsif 1/2 kolom) -->
+                <form class="feedback-form" onsubmit="handleSubmit(event)">
+                    
+                    <!-- Nama -->
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap (Wajib Diisi):</label>
+                        <input type="text" id="nama" name="nama" required placeholder="Cth: Ahmad Fauzan" maxlength="50">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email (Wajib Diisi):</label>
+                        <input type="email" id="email" name="email" required placeholder="cth: wali.santri@email.com">
+                    </div>
+
+                    <!-- Hubungan -->
+                    <div class="form-group">
+                        <label for="hubungan">Hubungan dengan Santri (Wajib Diisi):</label>
+                        <select id="hubungan" name="hubungan" required>
+                            <option value="" disabled selected>Pilih Hubungan</option>
+                            <option value="wali">Wali Santri</option>
+                            <option value="alumni">Alumni</option>
+                            <option value="guru">Guru/Pegawai</option>
+                            <option value="umum">Masyarakat Umum</option>
+                        </select>
+                    </div>
+
+                    <!-- Nomor HP -->
+                    <div class="form-group">
+                        <label for="hp">Nomor HP:</label>
+                        <!-- Pattern untuk validasi angka 8-15 digit -->
+                        <input type="tel" id="hp" name="hp" pattern="[0-9]{8,15}" placeholder="Cth: 081234567890" title="Masukkan minimal 8 digit angka">
+                    </div>
+                    
+                    <!-- Kategori Feedback (Melebar penuh di semua ukuran layar) -->
+                    <div class="form-group full-width">
+                        <label>Kategori Feedback (Wajib Dipilih):</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="kategori" value="kurikulum" required> Kurikulum</label>
+                            <label><input type="radio" name="kategori" value="sarana"> Sarana & Prasarana</label>
+                            <label><input type="radio" name="kategori" value="pelayanan"> Pelayanan Santri</label>
+                            <label><input type="radio" name="kategori" value="lain"> Lain-lain</label>
+                        </div>
+                    </div>
+
+                    <!-- Isi Feedback (Melebar penuh) -->
+                    <div class="form-group full-width">
+                        <label for="isi">Isi Feedback/Saran Anda (Wajib Diisi):</label>
+                        <textarea id="isi" name="isi" rows="6" required minlength="10" placeholder="Tuliskan masukan atau saran Anda secara detail di sini..."></textarea>
+                    </div>
+                    
+                    <!-- Checkbox Persetujuan (Melebar penuh) -->
+                    <div class="form-group full-width" style="flex-direction: row; align-items: center;">
+                        <input type="checkbox" id="setuju" name="setuju" required>
+                        <label for="setuju" style="margin-bottom: 0; font-weight: normal;">Saya setuju data ini digunakan untuk perbaikan internal sekolah.</label>
+                    </div>
+
+                    <!-- Tombol Submit (Melebar penuh) -->
+                    <div class="form-group full-width">
+                        <button type="submit">Kirim Feedback</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

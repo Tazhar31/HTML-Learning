@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran - HSI Boarding School</title>
+    <!-- Wajib sambungkan CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">HSI Purworejo</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="biodata.html">Profil Santri</a></li>
+                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
+                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
+                    <li><a href="feedback.html">Form Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-box">
+                <h1>Jadwal Pelajaran Kelas XII IPA-2</h1>
+                <p>Jadwal ini berlaku mulai Semester Ganjil Tahun Ajaran 2024/2025.</p>
+
+                <!-- Wrapper dengan overflow-x: auto untuk tabel responsif di mobile -->
+                <div class="table-wrapper">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <!-- rowspan untuk 'Waktu' dan 'Keterangan' -->
+                                <th rowspan="2">Waktu</th>
+                                <!-- colspan untuk 'Hari' -->
+                                <th colspan="5">Hari</th>
+                                <th rowspan="2">Keterangan</th>
+                            </tr>
+                            <tr>
+                                <th>Senin</th>
+                                <th>Selasa</th>
+                                <th>Rabu</th>
+                                <th>Kamis</th>
+                                <th>Jum'at</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Baris 1: Kolom Penuh (colspan) -->
+                            <tr>
+                                <td>04:00 - 05:30</td>
+                                <td colspan="5" style="text-align: center;">Shalat Subuh Berjamaah & Dzikir Pagi</td>
+                                <td>Wajib</td>
+                            </tr>
+                            <!-- Baris 2: Pelajaran dengan rowspan -->
+                            <tr>
+                                <td>07:30 - 09:00</td>
+                                <td>Fikih</td>
+                                <td rowspan="2">Bahasa Arab</td>
+                                <td>Tauhid</td>
+                                <td>Al-Qur'an</td>
+                                <td>Hadits</td>
+                                <td rowspan="2">Blok Pagi</td>
+                            </tr>
+                            <!-- Baris 3: Lanjutan rowspan dari atas -->
+                            <tr>
+                                <td>09:00 - 10:30</td>
+                                <td>Sejarah Islam</td>
+                                <td>Matematika</td>
+                                <td>Fisika</td>
+                                <td>Bahasa Indonesia</td>
+                            </tr>
+                            <!-- Baris 4: Istirahat & Makan Siang (colspan) -->
+                            <tr>
+                                <td>10:30 - 13:00</td>
+                                <td colspan="5" style="text-align: center; background-color: #fce3a2;">Istirahat, Shalat Dzuhur, & Makan Siang</td>
+                                <td>Wajib</td>
+                            </tr>
+                            <!-- Baris 5: Pelajaran Sore -->
+                            <tr>
+                                <td>13:00 - 14:30</td>
+                                <td>Biologi</td>
+                                <td>Kimia</td>
+                                <td>Tahsin</td>
+                                <td>Ekonomi</td>
+                                <td>Prakarya</td>
+                                <td>Blok Siang</td>
+                            </tr>
+                            <!-- Baris 6: Kegiatan Akhir Hari -->
+                            <tr>
+                                <td>15:00 - 16:30</td>
+                                <td colspan="4" style="text-align: center;">Shalat Ashar Berjamaah & Olahraga/Ekstrakurikuler</td>
+                                <td style="text-align: center;">Muhadhoroh (Latihan Pidato)</td>
+                                <td>Pilihan</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="7">
+                                    <em>*Jadwal dapat berubah sewaktu-waktu sesuai kebijakan sekolah.</em>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

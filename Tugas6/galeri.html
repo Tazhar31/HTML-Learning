@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kegiatan - HSI Boarding School</title>
+    <!-- Wajib sambungkan CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">HSI Purworejo</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="biodata.html">Profil Santri</a></li>
+                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
+                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
+                    <li><a href="feedback.html">Form Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-box">
+                <h1>Galeri Kegiatan Pesantren</h1>
+                <p>Lihat berbagai momen kegiatan belajar, olahraga, dan ibadah santri HSI Boarding School Purworejo. Galeri ini menggunakan Flexbox yang responsif (1, 2, atau 3/4 kolom).</p>
+
+                <!-- Galeri Flexbox Responsif -->
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Qiyamul+Lail" alt="Santri sedang Qiyamul Lail berjamaah">
+                        <div style="padding: 1rem; text-align: center;">Qiyamul Lail Bersama</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Tahsin+Quran" alt="Santri belajar tahsin Al-Qur'an">
+                        <div style="padding: 1rem; text-align: center;">Pembelajaran Tahsin</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Memanah" alt="Santri sedang latihan memanah">
+                        <div style="padding: 1rem; text-align: center;">Ekstrakurikuler Memanah</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Upacara" alt="Kegiatan upacara bendera hari Senin">
+                        <div style="padding: 1rem; text-align: center;">Upacara Bendera Senin</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Makan+Bersama" alt="Santri makan bersama di ruang makan">
+                        <div style="padding: 1rem; text-align: center;">Makan Siang Berjamaah</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Rihlah" alt="Kegiatan rihlah atau studi alam santri">
+                        <div style="padding: 1rem; text-align: center;">Studi Alam (Rihlah)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

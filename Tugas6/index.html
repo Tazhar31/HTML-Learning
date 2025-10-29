@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSI Boarding School Purworejo - Portal Utama</title>
+    <!-- Wajib sambungkan CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript untuk mengaktifkan/menonaktifkan menu di perangkat mobile
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">HSI Purworejo</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <!-- Navigasi Flexbox -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="biodata.html">Profil Santri</a></li>
+                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
+                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
+                    <li><a href="feedback.html">Form Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Box Selamat Datang -->
+            <div class="content-box">
+                <h1>Selamat Datang di HSI Boarding School Purworejo</h1>
+                <p>Website ini merupakan profil santri dan kegiatan belajar-mengajar di lingkungan HSI Boarding School Purworejo. Kami berkomitmen menyediakan pendidikan agama dan umum yang berkualitas dengan lingkungan yang islami.</p>
+                <br>
+                <p>Silakan jelajahi menu navigasi di atas untuk informasi lebih lanjut.</p>
+            </div>
+
+            <!-- Box-box pendukung (Grid responsif) -->
+            <div class="home-boxes">
+                <div class="content-box">
+                    <h2>Visi Kami</h2>
+                    <p>Menjadi institusi pendidikan terbaik yang melahirkan generasi Rabbani, berakhlak mulia, dan berprestasi unggul.</p>
+                </div>
+
+                <div class="content-box">
+                    <h2>Pengumuman Terbaru</h2>
+                    <ul>
+                        <li>Pendaftaran santri baru gelombang 2 dibuka s/d 15 Mei 2025.</li>
+                        <li>Ujian tengah semester akan dilaksanakan pada 10-15 Juni 2025.</li>
+                        <li>Kegiatan rihlah ke Gunung Kidul dijadwalkan ulang.</li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h2>Kontak Kami</h2>
+                    <p><strong>Alamat:</strong> Jl. Pendidikan Islam No. 1, Purworejo.</p>
+                    <p><strong>Telepon:</strong> (0275) 123456</p>
+                    <p><strong>Email:</strong> info@hsipurworejo.sch.id</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

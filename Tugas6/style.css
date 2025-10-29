@@ -1,0 +1,380 @@
+/* --- Global Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #008080; /* Teal/Green yang mewakili institusi islami */
+    --secondary-color: #f0fdf4; /* Latar belakang yang lembut */
+    --accent-color: #ff9900; /* Warna aksen untuk border judul */
+    --text-color: #333;
+    --bg-color: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --- Header & Navigation (Mobile-First) --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: var(--shadow);
+    padding: 0.5rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.logo a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Menu tumpuk (1 kolom) di mobile */
+    width: 100%; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.nav-menu.active {
+    max-height: 500px;
+    flex-direction: row; /* Ubah ke baris saat aktif */
+    flex-wrap: wrap; /* Menu bisa 2 item per baris */
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.menu-toggle {
+    display: block; /* Hamburger icon terlihat di mobile */
+    background: none;
+    border: none;
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-menu li a {
+    display: block;
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%; 
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Main Content Section --- */
+main {
+    padding: 2rem 0;
+}
+
+.content-box {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.content-box h2, .content-box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    /* border-left judul box */
+    border-left: 5px solid var(--accent-color);
+    line-height: 1.2;
+}
+
+/* --- Biodata Page Specific (Mobile: Stack) --- */
+.profile-content {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    border-radius: 12px; /* border-radius gambar */
+    object-fit: cover;
+    aspect-ratio: 1/1; 
+}
+
+.profile-details {
+    width: 100%;
+}
+
+/* --- Gallery Page Specific (Flexbox Grid - 1 kolom mobile) --- */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery-item {
+    width: 100%; /* 1 kolom di mobile */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+    border-radius: 8px; /* border-radius gambar */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Jadwal Page Specific (Responsive Table) --- */
+.table-wrapper {
+    overflow-x: auto; /* Wajib: Scrollable di mobile */
+    max-width: 100%;
+}
+
+.schedule-table {
+    width: 100%;
+    min-width: 700px; /* Minimal width agar tabel tidak terlalu kecil */
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.schedule-table thead th {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* --- Feedback Page Specific (Responsive Form - 1 kolom mobile) --- */
+.feedback-form {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ... (Input, textarea, button styling remains the same as in thought process) ... */
+.form-group input:not([type="radio"]),
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Elemen ini selalu penuh lebar */
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #006666;
+    transform: translateY(-1px);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 0.9rem;
+}
+
+/* Style untuk box di homepage */
+.home-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+
+/* ====================================================================== */
+/* --- Tablet Styles (@media min-width: 600px and max-width: 1023px) --- */
+/* ====================================================================== */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    /* Navigation: Rata tengah, lebih rapat, hamburger hilang */
+    .menu-toggle {
+        display: none; 
+    }
+    .nav-menu {
+        max-height: initial; 
+        flex-direction: row; 
+        width: auto;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: nowrap;
+    }
+    .nav-menu.active {
+        padding-top: 0;
+    }
+    .nav-menu li a {
+        padding: 0.5rem 1rem;
+        width: auto;
+    }
+    
+    /* Home Page Boxes */
+    .home-boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Biodata: 2 kolom */
+    .profile-content {
+        flex-direction: row; 
+        align-items: flex-start;
+        text-align: left;
+    }
+    .profile-image {
+        flex: 0 0 35%; 
+        max-width: 35%;
+    }
+    .profile-details {
+        flex: 1;
+    }
+
+    /* Gallery: 2 kolom */
+    .gallery-item {
+        width: calc(50% - 0.5rem); 
+    }
+
+    /* Form: 2 kolom */
+    .feedback-form {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+/* ====================================================================== */
+/* --- Desktop Styles (@media min-width: 1024px) --- */
+/* ====================================================================== */
+@media (min-width: 1024px) {
+    .container {
+        padding: 2rem;
+    }
+
+    /* Home Page Boxes */
+    .home-boxes {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    /* Gallery: 3 kolom (opsi 4 kolom ada di komentar style.css) */
+    .gallery-item {
+        width: calc(33.333% - 0.666rem); 
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+    .nav-menu {
+        max-height: initial; 
+        flex-direction: row; 
+        width: auto;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Pastikan navigation items tidak mengambil full width saat non-mobile */
+@media (min-width: 600px) {
+     .nav-menu li {
+        width: auto; 
+    }
+}

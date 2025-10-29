@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Santri - HSI Boarding School</title>
+    <!-- Wajib sambungkan CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">HSI Purworejo</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="biodata.html">Profil Santri</a></li>
+                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
+                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
+                    <li><a href="feedback.html">Form Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-box">
+                <h1>Biodata Lengkap Santri</h1>
+                <!-- Layout responsif: stack di mobile, 2 kolom di tablet/desktop (diatur di style.css .profile-content) -->
+                <div class="profile-content">
+                    <div class="profile-image">
+                        <!-- Placeholder untuk foto-diri.jpg -->
+                        <img src="images/p1.png" alt="Diri Santri">
+                    </div>
+                    <div class="profile-details">
+                        <h2>Ryatsah Fatih Al-Muntazhar</h2>
+                        <hr>
+                        <p><strong>Kelas:</strong> X IT-B</p>
+                        <p><strong>Tempat/Tanggal Lahir:</strong> Tangerang Selatan, 9 Juni 2010</p>
+                        <p><strong>Alamat Asal:</strong> Perum. SVR Blok D.12</p>
+                        <p><strong>Pencapaian Hafalan:</strong> 15 Juz</p>
+                        <p><strong>Riwayat Pendidikan Sebelumnya:</strong> Ma'had Imam Asy Syafi'i Al Atsary</p>
+                        <p><strong>Motto Hidup:</strong> Hidup dan matiku hanya untuk Allah.</p>
+                        
+                        <h3>Keahlian & Minat</h3>
+                        <ul>
+                            <li>Khat Arab (Kaligrafi)</li>
+                            <li>Futsal dan Basket</li>
+                            <li>Gambar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
