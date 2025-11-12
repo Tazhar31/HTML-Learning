@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Santri - HSI Boarding School</title>
-    <!-- Wajib sambungkan CSS eksternal -->
+    <title>Biodata Lengkap Santri</title>
     <link rel="stylesheet" href="style.css">
     <script>
         function toggleMenu() {
@@ -15,61 +14,59 @@
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">HSI Purworejo</a>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="biodata.html">Profil Santri</a></li>
-                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
-                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
-                    <li><a href="feedback.html">Form Feedback</a></li>
-                </ul>
-            </nav>
+    <header class="header-nav">
+      <div class="header-item">
+            <img src="images/Logo_sekolah.png" alt="Logo Sekolah" class="logo-sekolah">
+            <h1>Profil Santri</h1>
         </div>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">🏡 Home</a></li>
+                <li><a href="biodata.html" id="active">👤 Biodata</a></li>
+                <li><a href="galeri.html">🖼️ Galeri</a></li>
+                <li><a href="jadwal.html">📅 Jadwal</a></li>
+                <li><a href="feedback.html">📝 Feedback</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="content-box">
-                <h1>Biodata Lengkap Santri</h1>
-                <!-- Layout responsif: stack di mobile, 2 kolom di tablet/desktop (diatur di style.css .profile-content) -->
-                <div class="profile-content">
-                    <div class="profile-image">
-                        <!-- Placeholder untuk foto-diri.jpg -->
-                        <img src="images/p1.png" alt="Diri Santri">
-                    </div>
-                    <div class="profile-details">
-                        <h2>Ryatsah Fatih Al-Muntazhar</h2>
-                        <hr>
-                        <p><strong>Kelas:</strong> X IT-B</p>
-                        <p><strong>Tempat/Tanggal Lahir:</strong> Tangerang Selatan, 9 Juni 2010</p>
-                        <p><strong>Alamat Asal:</strong> Perum. SVR Blok D.12</p>
-                        <p><strong>Pencapaian Hafalan:</strong> 15 Juz</p>
-                        <p><strong>Riwayat Pendidikan Sebelumnya:</strong> Ma'had Imam Asy Syafi'i Al Atsary</p>
-                        <p><strong>Motto Hidup:</strong> Hidup dan matiku hanya untuk Allah.</p>
-                        
-                        <h3>Keahlian & Minat</h3>
-                        <ul>
-                            <li>Khat Arab (Kaligrafi)</li>
-                            <li>Futsal dan Basket</li>
-                            <li>Gambar</li>
-                        </ul>
-                    </div>
+    <main class="container">
+        <section class="content-box">
+            <h2>👤 Biodata Lengkap</h2>
+            
+            <div id="biodata-profile">
+                <div class="profile-image">
+                    <img src="images/g.png" alt="Foto Diri Santri" class="img-responsive">
+                    <p id="Profil"><b>Nama: Ryatsah Fatih Al Muntazhar</b><br>
+                    <b>Kelas:</b> 10B - IT<br>
+                    <b>Tempat/Tanggal Lahir:</b> Tanggerang Selatan, 9 Juni 2001</p>
+                </div>
+
+                <div class="profile-details">
+                    <h3>Tentang Saya</h3>
+                    <p>Saya adalah seorang santri di HSI Boarding School yang memiliki semangat tinggi dalam mempelajari ilmu agama dan teknologi. Saya percaya bahwa menggabungkan keduanya akan menghasilkan manfaat yang besar bagi umat. Motto saya: "Terus belajar, terus berkarya."</p>
+                    <br>
+                    <hr class="hr">
+
+                    <h3>Hobi</h3>
+                    <ul>
+                        <li>Membaca buku sejarah Islam.</li>
+                        <li>Memanah dan berkuda.</li>
+                        <li>Membuat desain antarmuka web (UI/UX).</li>
+                    </ul>
+                    <hr class="hr">
+
+                    <h3>Cita-Cita</h3>
+                    <ol>
+                        <li>Menjadi seorang Da'i yang mumpuni.</li>
+                        <li>Menjadi pengembang web profesional.</li>
+                        <li>Melanjutkan studi di Universitas Islam Madinah.</li>
+                    </ol>
                 </div>
             </div>
-        </div>
+            
+        </section>
     </main>
-
-    <footer>
-        <div class="container">
-            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
-        </div>
-    </footer>
-
 </body>
 </html>

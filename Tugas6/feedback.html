@@ -3,139 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Feedback - HSI Boarding School</title>
-    <!-- Wajib sambungkan CSS eksternal -->
+    <title>Form Feedback dan Buku Tamu</title>
     <link rel="stylesheet" href="style.css">
     <script>
         function toggleMenu() {
             const menu = document.getElementById('navMenu');
             menu.classList.toggle('active');
         }
-        // Fungsi untuk menangani submit form tanpa menggunakan alert()
-        function handleSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const messageBox = document.getElementById('formMessage');
-            
-            // Tampilkan pesan sukses
-            messageBox.textContent = 'Terima kasih atas masukan Anda! Kami akan memproses feedback ini secepatnya.';
-            messageBox.style.backgroundColor = '#d1e7dd'; /* Warna hijau muda */
-            messageBox.style.color = '#0f5132'; /* Warna teks hijau gelap */
-            messageBox.style.border = '1px solid #badbcc';
-            messageBox.style.padding = '15px';
-            messageBox.style.marginBottom = '1rem';
-            messageBox.style.borderRadius = '8px';
-            messageBox.style.display = 'block';
-
-            form.reset();
-            
-            // Sembunyikan pesan setelah 5 detik
-            setTimeout(() => {
-                messageBox.style.display = 'none';
-            }, 5000);
-        }
     </script>
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">HSI Purworejo</a>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="biodata.html">Profil Santri</a></li>
-                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
-                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
-                    <li><a href="feedback.html">Form Feedback</a></li>
-                </ul>
-            </nav>
+    <header class="header-nav">
+      <div class="header-item">
+            <img src="images/Logo_sekolah.png" alt="Logo Sekolah" class="logo-sekolah">
+            <h1>Form Feedback</h1>
         </div>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">🏡 Home</a></li>
+                <li><a href="biodata.html">👤 Biodata</a></li>
+                <li><a href="galeri.html">🖼️ Galeri</a></li>
+                <li><a href="jadwal.html">📅 Jadwal</a></li>
+                <li><a href="feedback.html" id="active">📝 Feedback</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="content-box">
-                <h1>Formulir Feedback dan Saran</h1>
-                <p>Masukan Anda sangat berharga bagi kami untuk meningkatkan kualitas pendidikan dan pelayanan.</p>
-                
-                <!-- Message Box for success/error -->
-                <div id="formMessage" style="display: none;"></div>
+    <main class="container">
+        <section class="content-box">
+            <h2>📝 Formulir Masukan (Feedback)</h2>
+            <p>Silakan berikan masukan Anda mengenai website ini atau sampaikan pesan melalui formulir di bawah.</p>
+            
+            <form action="https://httpbin.org/post" method="POST" class="feedback-form">
 
-                <!-- Form Feedback Lengkap (Grid responsif 1/2 kolom) -->
-                <form class="feedback-form" onsubmit="handleSubmit(event)">
-                    
-                    <!-- Nama -->
-                    <div class="form-group">
-                        <label for="nama">Nama Lengkap (Wajib Diisi):</label>
-                        <input type="text" id="nama" name="nama" required placeholder="Cth: Ahmad Fauzan" maxlength="50">
+                <fieldset>
+                    <legend>Data Kontak Anda</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap (text):</label>
+                            <input type="text" id="nama" name="nama_pengirim" required placeholder="Cth: Abdullah">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (email):</label>
+                            <input type="email" id="email" name="email_pengirim" required placeholder="Cth: anda@example.com">
+                        </div>
                     </div>
+                </fieldset>
 
-                    <!-- Email -->
-                    <div class="form-group">
-                        <label for="email">Email (Wajib Diisi):</label>
-                        <input type="email" id="email" name="email" required placeholder="cth: wali.santri@email.com">
-                    </div>
+                <fieldset>
+                    <legend>Detail Masukan</legend>
 
-                    <!-- Hubungan -->
-                    <div class="form-group">
-                        <label for="hubungan">Hubungan dengan Santri (Wajib Diisi):</label>
-                        <select id="hubungan" name="hubungan" required>
-                            <option value="" disabled selected>Pilih Hubungan</option>
-                            <option value="wali">Wali Santri</option>
-                            <option value="alumni">Alumni</option>
-                            <option value="guru">Guru/Pegawai</option>
-                            <option value="umum">Masyarakat Umum</option>
-                        </select>
-                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rating">Rating Website (number, 1-5):</label>
+                            <input type="number" id="rating" name="rating_website" min="1" max="5" value="5" required>
+                        </div>
 
-                    <!-- Nomor HP -->
-                    <div class="form-group">
-                        <label for="hp">Nomor HP:</label>
-                        <!-- Pattern untuk validasi angka 8-15 digit -->
-                        <input type="tel" id="hp" name="hp" pattern="[0-9]{8,15}" placeholder="Cth: 081234567890" title="Masukkan minimal 8 digit angka">
-                    </div>
-                    
-                    <!-- Kategori Feedback (Melebar penuh di semua ukuran layar) -->
-                    <div class="form-group full-width">
-                        <label>Kategori Feedback (Wajib Dipilih):</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="kategori" value="kurikulum" required> Kurikulum</label>
-                            <label><input type="radio" name="kategori" value="sarana"> Sarana & Prasarana</label>
-                            <label><input type="radio" name="kategori" value="pelayanan"> Pelayanan Santri</label>
-                            <label><input type="radio" name="kategori" value="lain"> Lain-lain</label>
+                        <div class="form-group">
+                            <label>Jenis Masukan (radio):</label>
+                            <div>
+                                <input type="radio" id="saran" name="jenis_masukan" value="saran" checked>
+                                <label for="saran">Saran</label>
+                                <input type="radio" id="kritik" name="jenis_masukan" value="kritik">
+                                <label for="kritik">Kritik</label>
+                                <input type="radio" id="pujian" name="jenis_masukan" value="pujian">
+                                <label for="pujian">Pujian</label>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Isi Feedback (Melebar penuh) -->
-                    <div class="form-group full-width">
-                        <label for="isi">Isi Feedback/Saran Anda (Wajib Diisi):</label>
-                        <textarea id="isi" name="isi" rows="6" required minlength="10" placeholder="Tuliskan masukan atau saran Anda secara detail di sini..."></textarea>
-                    </div>
-                    
-                    <!-- Checkbox Persetujuan (Melebar penuh) -->
-                    <div class="form-group full-width" style="flex-direction: row; align-items: center;">
-                        <input type="checkbox" id="setuju" name="setuju" required>
-                        <label for="setuju" style="margin-bottom: 0; font-weight: normal;">Saya setuju data ini digunakan untuk perbaikan internal sekolah.</label>
+                    <div class="form-row">
+                        <div class="form-group full-width-field">
+                            <label for="halaman">Halaman Terbaik (select):</label>
+                            <select id="halaman" name="halaman_favorit" required>
+                                <option value="" disabled selected>Pilih Halaman</option>
+                                <option value="biodata">Biodata</option>
+                                <option value="galeri">Galeri</option>
+                                <option value="jadwal">Jadwal</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <!-- Tombol Submit (Melebar penuh) -->
-                    <div class="form-group full-width">
-                        <button type="submit">Kirim Feedback</button>
+                    <div class="form-group full-width-field">
+                        <label for="pesan">Pesan/Komentar Anda (textarea):</label>
+                        <textarea id="pesan" name="pesan_lengkap" rows="5" required placeholder="Tuliskan pesan Anda di sini..."></textarea>
                     </div>
-                </form>
-            </div>
-        </div>
+
+                    <div class="form-group">
+                        <label>Saya setuju untuk (checkbox):</label>
+                        <div>
+                            <input type="checkbox" id="publikasi" name="setuju_publikasi" value="ya" required>
+                            <label for="publikasi">Masukan boleh dipublikasikan (Wajib Cek)</label>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="reset">Bersihkan Formulir (Reset)</button>
+                    <button type="submit">Kirim Feedback (Submit)</button>
+                </div>
+
+            </form>
+        </section>
     </main>
-
-    <footer>
-        <div class="container">
-            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
-        </div>
-    </footer>
-
 </body>
 </html>

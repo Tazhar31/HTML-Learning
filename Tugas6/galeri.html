@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Kegiatan - HSI Boarding School</title>
-    <!-- Wajib sambungkan CSS eksternal -->
+    <title>Galeri Foto Santri</title>
     <link rel="stylesheet" href="style.css">
     <script>
         function toggleMenu() {
@@ -15,66 +14,68 @@
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">HSI Purworejo</a>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="biodata.html">Profil Santri</a></li>
-                    <li><a href="galeri.html">Galeri Kegiatan</a></li>
-                    <li><a href="jadwal.html">Jadwal Pelajaran</a></li>
-                    <li><a href="feedback.html">Form Feedback</a></li>
-                </ul>
-            </nav>
+    <header class="header-nav">
+        <div class="header-item">
+            <img src="images/Logo_sekolah.png" alt="Logo Sekolah" class="logo-sekolah">
+            <h1>Galeri Santri</h1>
         </div>
+      
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">🏡 Home</a></li>
+                <li><a href="biodata.html">👤 Biodata</a></li>
+                <li><a href="galeri.html" id="active">🖼️ Galeri</a></li>
+                <li><a href="jadwal.html">📅 Jadwal</a></li>
+                <li><a href="feedback.html">📝 Feedback</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="content-box">
-                <h1>Galeri Kegiatan Pesantren</h1>
-                <p>Lihat berbagai momen kegiatan belajar, olahraga, dan ibadah santri HSI Boarding School Purworejo. Galeri ini menggunakan Flexbox yang responsif (1, 2, atau 3/4 kolom).</p>
+    <main class="container">
+        <section class="content-box">
+            <h2>🖼️ Galeri Kegiatan</h2>
 
-                <!-- Galeri Flexbox Responsif -->
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Qiyamul+Lail" alt="Santri sedang Qiyamul Lail berjamaah">
-                        <div style="padding: 1rem; text-align: center;">Qiyamul Lail Bersama</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Tahsin+Quran" alt="Santri belajar tahsin Al-Qur'an">
-                        <div style="padding: 1rem; text-align: center;">Pembelajaran Tahsin</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Memanah" alt="Santri sedang latihan memanah">
-                        <div style="padding: 1rem; text-align: center;">Ekstrakurikuler Memanah</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Upacara" alt="Kegiatan upacara bendera hari Senin">
-                        <div style="padding: 1rem; text-align: center;">Upacara Bendera Senin</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Makan+Bersama" alt="Santri makan bersama di ruang makan">
-                        <div style="padding: 1rem; text-align: center;">Makan Siang Berjamaah</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/400x250/008080/FFFFFF?text=Rihlah" alt="Kegiatan rihlah atau studi alam santri">
-                        <div style="padding: 1rem; text-align: center;">Studi Alam (Rihlah)</div>
-                    </div>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="images/g.png" alt="Foto Close-up Diri">
+                    <p>Foto Close-up saat kegiatan di sekolah.</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/panti.jpg" alt="Kegiatan Kunjungan ke Panti Asuhan">
+                    <p>Kegiatan kunjungan ke panti asuhan</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/kegfutsal.jpg" alt="Kegiatan Futsal Bersama Teman">
+                    <p>Kegiatan eskul futsal.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/futsal.jpg" alt="Pemainan Futsal di Lapangan Sekolah">
+                    <p>Siswa yang ikut eskul futsal</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/seragam.jpg" alt="Ba'da apel Pagi dengan Seragam Baru">
+                    <p>Potret setelah apel pagi.</p>
+                </div>
+                
+            </div>
+
+            
+        </section>
+        <section class="vid">
+            <div class="vid-box">
+                <h2>🎥 Video Kegiatan</h2>
+                <div class="video-container">
+                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Dw0JP0CuMIM?si=siJlAL3UDKoU7jeV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
+
+        </section>
     </main>
-
-    <footer>
-        <div class="container">
-            &copy; 2024 HSI Boarding School Purworejo. All rights reserved.
-        </div>
-    </footer>
-
 </body>
 </html>
