@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jadwal Keseharian Santri - SMA IT HSIBS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* Desain Background */
+        body {
+            background-color: #f4f7f9;
+        }
+        
+        /* Box konten utama */
+        .main-content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        /* Styling Navigasi */
+        .main-nav .nav-link {
+            color: #343a40;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+        }
+        .main-nav .nav-link:hover {
+            background-color: #e9ecef;
+        }
+        .main-nav .btn-primary-active {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        .main-nav .btn-primary-active:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        
+        /* Responsive Logo */
+        .logo-img {
+            max-width: 40px;
+            height: auto;
+        }
+
+        /* Styling Header Tabel */
+        .table-primary-header {
+            background-color: #007bff; /* Biru Primer */
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="text-center py-4 bg-white shadow-sm">
+        <div class="container">
+            <img src="images/Logo_sekolah.png" alt="Logo HSIBS" class="logo-img d-block mx-auto mb-2">
+            <h1 class="h3 fw-bold mb-0">Jadwal Keseharian Santri</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container justify-content-left">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav main-nav py-2 py-lg-0">
+                    <li class="nav-item mx-lg-2 mb-2 mb-lg-0"><a href="index.html" class="nav-link d-flex align-items-center justify-content-center"><span class="material-icons me-1" style="font-size: 20px;">home</span> Home</a></li>
+                    <li class="nav-item mx-lg-2 mb-2 mb-lg-0"><a href="biodata.html" class="nav-link d-flex align-items-center justify-content-center"><span class="material-icons me-1" style="font-size: 20px;">person</span> Biodata</a></li>
+                    <li class="nav-item mx-lg-2 mb-2 mb-lg-0"><a href="galeri.html" class="nav-link d-flex align-items-center justify-content-center"><span class="material-icons me-1" style="font-size: 20px;">collections</span> Galeri</a></li>
+                    <li class="nav-item mx-lg-2 mb-2 mb-lg-0">
+                        <a href="jadwal.html" class="btn btn-primary-active d-flex align-items-center justify-content-center">
+                            <span class="material-icons me-1" style="font-size: 20px;">calendar_today</span> Jadwal
+                        </a>
+                    </li>
+                    <li class="nav-item mx-lg-2 mb-2 mb-lg-0"><a href="feedback.html" class="nav-link d-flex align-items-center justify-content-center"><span class="material-icons me-1" style="font-size: 20px;">feedback</span> Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <section class="main-content-box">
+            
+            <h2 class="h4 fw-bold mb-3 border-start border-primary border-4 ps-3 d-flex align-items-center">
+                <span class="material-icons me-2" style="font-size: 24px;">date_range</span> Jadwal Pekanan Saya
+            </h2>
+
+            <p class="small text-muted mb-4">
+                Jadwal ini berlaku untuk semester genap tahun ajaran 1446 H.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped align-middle text-center">
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col" class="table-primary-header" rowspan="2" style="width: 15%;">Waktu</th>
+                            <th scope="col" class="table-primary-header" colspan="3">Mata Pelajaran Wajib</th>
+                            <th scope="col" class="table-primary-header" rowspan="2" style="width: 25%;">Kegiatan Lain</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="table-primary-header">Senin–Selasa</th>
+                            <th scope="col" class="table-primary-header">Rabu–Kamis</th>
+                            <th scope="col" class="table-primary-header">Jum'at</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <th scope="row">07:30 – 08:00</th>
+                            <td>Fikih</td>
+                            <td>Tauhid</td>
+                            <td>Riyadhah (Olah Raga)</td>
+                            <td>Hafalan Al-Qur'an</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">09:00 – 10:30</th>
+                            <td>Bahasa Arab</td>
+                            <td>Sirah Nabawiyyah</td>
+                            <td>Muroja’ah Pagi</td>
+                            <td></td> </tr>
+                        <tr>
+                            <th scope="row">10:30 – 11:00</th>
+                            <td colspan="3">Istirahat dan Persiapan Sholat Dzuhur</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13:00 – 14:30</th>
+                            <td>Web Development (Praktik)</td>
+                            <td>Tahsin</td>
+                            <td>—</td>
+                            <td>Tidur Siang</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16:00 – 17:30</th>
+                            <td colspan="3">Kegiatan Ekstrakurikuler (Panahan/Berkuda)</td>
+                            <td>Tugas Kelompok</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">20:00 – 21:30</th>
+                            <td>Belajar Mandiri</td>
+                            <td>Belajar Mandiri</td>
+                            <td>Kajian Umum</td>
+                            <td>Sholat Isya Berjamaah</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="small text-danger mt-3">
+                Jadwal dapat berubah sewaktu-waktu sesuai kebijakan sekolah.
+            </p>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
